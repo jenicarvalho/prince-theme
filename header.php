@@ -14,7 +14,7 @@
     <meta property="og:description" content="">
     <meta property="og:title" content=''>
 
-    <title><?php echo PXS_SITE_NAME?></title>
+    <title><?php  titulo()?></title>
 
 
     <!-- fav -->
