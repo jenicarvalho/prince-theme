@@ -1,5 +1,4 @@
 <?php
-	add_theme_support( 'post-thumbnails' );
 
 
 	add_action('after_setup_theme', 'custom_setup');
@@ -16,6 +15,7 @@ function custom_setup(){
 	register_nav_menu('menu-header', 'Menu Principal');
 	
 	//thumbs	
+	add_theme_support( 'post-thumbnails' );
 }
 
 
@@ -81,11 +81,74 @@ function cadastrando_post_type_agencias() {
        		'supports' => $supports
     );
 
-    register_post_type( 'imovel', $args );
+    register_post_type( 'agencias', $args );
 }
 
 add_action('init', 'cadastrando_post_type_agencias');
 
+
+
+//adiciona metabox de links das agencias
+
+function link_agencias() {
+	add_meta_box(
+		'link-agencia',
+		'Endereço da agência',
+		'link_agencia',
+		'agencias',
+		'normal',
+		'default'
+	);
+}
+
+add_action('add_meta_boxes', 'link_agencias');
+
+function link_agencia( $post ) { 
+	$links_agencia = get_post_meta( $post->ID ); ?>
+
+	<style>
+
+		.maluras-metabox-input {
+			height: 100%;
+			border: 1px solid #CCC;
+			border-left: none;
+			margin: 0;
+			width: 80%
+		}
+
+	</style>
+
+		<div class="maluras-metabox-item">
+			<div class="input-addon-wrapper">
+				<input id="maluras-preco-input" class="maluras-metabox-input" type="text" name="link"
+				value="<?= $links_agencia['link'][0]; ?>" placeholder="http://exemplo.com">
+			</div>
+		</div>
+<?php
+
+}
+
+function salvar_meta_info_agencias( $post_id ) {
+	if( isset($_POST['link']) ) {
+		update_post_meta( $post_id, 'link', sanitize_text_field( $_POST['link'] ) );
+	}
+
+}
+
+add_action('save_post', 'salvar_meta_info_agencias');
+
+
+
+
+//função de titulo
+
+function titulo(){
+	bloginfo('name');
+	if(!is_home()){
+		echo " | ";
+	 	the_title();
+	}
+}
 
 //função de data
 
@@ -143,5 +206,4 @@ function get_data(){
 //define constantes que ajudarão a evitar várias requisições
 define('PXS_URL', get_home_url());
 define('PXS_THEME_URL', get_bloginfo('template_url'));
-define('PXS_SITE_NAME', get_bloginfo('name'));
 
