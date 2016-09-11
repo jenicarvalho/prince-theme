@@ -191,32 +191,37 @@
 
         <div class="partners">
           <div class="row">
+
+
+                <?php
+
+                  $args = array('post_type' => 'agencias');
+                  $loop = new WP_Query( $args );
+
+                  if( $loop->have_posts() ) :
+                                             
+                  while ( $loop->have_posts() ) :
+                    $loop->the_post();
+
+                    //recupera apenas endereço da imagem
+                    $thumbnail_src = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), '' );
+
+
+                  $links_agencia = get_post_meta( $post->ID );
+
+                ?>          
             <div class="col-md-3">
-              <a href="http://inspireideias.ag/" target="_blank"><img src="<?php echo PXS_THEME_URL?>/img/agencias/inspire.png"></a>
+              <a href="<?= $links_agencia['link'][0]; ?>" target="_blank"><img src="<?php echo $thumbnail_src[0]?>"></a>
             </div> 
-            <div class="col-md-3">
-              <a href="http://vivartepublicidade.com.br"  target="_blank"><img src="<?php echo PXS_THEME_URL?>/img/agencias/vivarte.png"></a>
-            </div>
-            <div class="col-md-3">
-              <a href="http://tiberis.com.br/" target="_blank"><img src="<?php echo PXS_THEME_URL?>/img/agencias/tiberis.png"></a>
-            </div>
-            <div class="col-md-3">
-              <a href="http://connectmarketingdigital.com.br.ag/" target="_blank"><img src="<?php echo PXS_THEME_URL?>/img/agencias/connect.png"></a>
-            </div> 
+
+            <?php 
+                    endwhile;
+                  endif;
+                  // Reset Query
+                  wp_reset_postdata();
+            ?>
           </div>
 
-          <div class="row">
-            <div class="col-md-3">
-              <a href="http://pimentapropaganda.com.br" target="_blank"><img src="<?php echo PXS_THEME_URL?>/img/agencias/pimenta.png"></a>
-            </div>
-            <div class="col-md-3">
-              <a href="http://imaggine.com.br/" target="_blank"><img src="<?php echo PXS_THEME_URL?>/img/agencias/imaggine.png"></a>
-            </div>
-            <div class="col-md-3">
-              <a href="http://brandkit.com.br" target="_blank"><img src="<?php echo PXS_THEME_URL?>/img/agencias/brandkit.png"></a>
-            </div>
-          </div>
-        </div>
 
       </div>
   </section>
