@@ -203,22 +203,18 @@
                   while ( $loop->have_posts() ) :
                     $loop->the_post();
 
-                    //recupera apenas endereço da imagem
-                    $thumbnail_src = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), '' );
-
-
                   $links_agencia = get_post_meta( $post->ID );
 
                 ?>          
             <div class="col-md-3">
-              <a href="<?= $links_agencia['link'][0]; ?>" target="_blank"><img src="<?php echo $thumbnail_src[0]?>"></a>
+              <a href="<?= $links_agencia['link'][0]; ?>" target="_blank"><?php the_post_thumbnail();?>"></a>
             </div> 
 
             <?php 
                     endwhile;
                   endif;
                   // Reset Query
-                  wp_reset_postdata();
+                  wp_reset_query();
             ?>
           </div>
 
@@ -271,7 +267,7 @@
             <?php 
                   endwhile; 
                   // Reset Query
-                  wp_reset_query();
+                  wp_reset_query();;
             ?>
             <!-- /end featured post -->
 
