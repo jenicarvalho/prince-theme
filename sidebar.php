@@ -8,8 +8,7 @@
         
         <!-- busca -->
         <div class="busca-blog">
-          <input type="text" name="busca" class="busca-blog" placeholder="Search..">
-          <button><i class="fa fa-search" ></i></button>
+          <?php get_search_form();?>
         </div>
         <!--/ end busca -->
 
