@@ -1,9 +1,26 @@
 <?php get_header()?>
   <!-- SLIDER -->
-  <section class="slider" id="home">
+
+<?php 
+
+      $args = array(
+          'post_type' => 'slide',
+          'order'     => 'asc',
+          );
+      $query = new WP_Query( $args );
+      if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); 
+
+      //recupera apenas endereço da imagem
+      $thumbnail_src = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), '' );
+
+      $slide_meta = get_post_meta( $post->ID )
+
+
+?>  
+  <section class="slider" id="home" style="background: url(<?=$thumbnail_src[0]?>)">
     <div class="container">
-        <h2>SONHE GRANDE. FAÇA MAIS</h2>
-        <p>Entregue mais sites com a Pixels!</p>
+        <h2><?=$slide_meta['principal'][0]?></h2>
+        <p><?=$slide_meta['subtitulo'][0]?></p>
 
         <div class="buttons">
           <a class="btn btn-info" href="#quem">CONHEÇA</a>
@@ -12,6 +29,15 @@
     </div>
   </section>
   <!-- /end slider -->
+ 
+
+  <?php 
+          endwhile;
+        endif;
+        // Reset Query
+        wp_reset_query();
+  ?>
+
 
 
 <!-- SERVICES-->
@@ -63,18 +89,21 @@
               <div class="col-md-7 col-sm-12 col-xs-12">
                   <h2 class="title-h2">A Pixels</h2>
                   <span class="border-fun"></span>
+<?php 
 
-                  <p class="text-gray">Uma ótima parceira para você, é isso o que descreve a nossa empresa.</p>
+                $args = array(
+                    'post_type' => 'sobre',
+                    'order'     => 'asc',
+                    );
+                $query = new WP_Query( $args );
+                if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); 
 
-                  <p class="text-black">Trabalhamos a dois anos no mercado de Outsourcing de Serviços Web, entendemos e atendemos as agências e suas peculiaridades. </p>
-                  
-                  <p class="text-black">Nossa meta é te ajudar a fazer mais em menos tempo, produzindo sites, portais e e-commerces de todos os tamanhos e para todo tipo de cliente. </p>
-                 
-                  <p class="text-black">Se você não entende de códigos, desenvolvimento e todo esse mundo online não se preocupe, a pixels faz esse meio de campo entre você e o cliente para que você consiga focar no seu negócio principal.
-                  </p>
+                the_content();
+
+?>
                   <br>
-
                   <a href="#contato" class="dest-blue" >FALE COM A PIXELS</a>
+                  <?php endwhile; endif; wp_reset_postdata(); ?>
               </div>
             </div>
 
@@ -207,7 +236,7 @@
 
                 ?>          
             <div class="col-md-3">
-              <a href="<?= $links_agencia['link'][0]; ?>" target="_blank"><?php the_post_thumbnail();?>"></a>
+              <a href="<?= $links_agencia['link'][0]; ?>" target="_blank"><?php the_post_thumbnail();?></a>
             </div> 
 
             <?php 
