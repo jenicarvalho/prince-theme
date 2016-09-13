@@ -3,6 +3,7 @@
     <div>
         <label class="screen-reader-text" for="s"><?php _x( 'Search for:', 'label' ); ?></label>
         <input type="text" value="<?php echo get_search_query(); ?>" name="s" id="s"   class="busca-blog" placeholder="Search.."/>
+         <input type="hidden" name="post_type" value="post" />
         <button><i class="fa fa-search" ></i></button>
     </div>
 </form>
