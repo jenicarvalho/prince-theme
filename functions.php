@@ -50,6 +50,21 @@ function custom_formats(){
 }
 
 
+/**
+
+ * Copyright Pixels
+
+ * */
+
+add_filter('admin_footer_text', 'add_copyright');
+
+function add_copyright() {
+
+	echo '© <a href="http://agenciapixels.com/">Pixels</a> - Desenvolvimento Pixels';
+
+}
+
+
 // POST TYPES AGÊNCIAS
 
 
