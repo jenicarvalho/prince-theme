@@ -17,7 +17,7 @@
 
 
 ?>  
-  <section class="slider" id="home" style="background: url(<?=$thumbnail_src[0]?>)">
+  <section class="slider" id="home" style="background: url(<?=$thumbnail_src[0]?>); background-size:cover; background-attachment:fixed">
     <div class="container">
         <h2><?=$slide_meta['principal'][0]?></h2>
         <p><?=$slide_meta['subtitulo'][0]?></p>
@@ -253,7 +253,7 @@
 <!-- / END AGENCY -->
 
 
-<!-- BLOG -->
+<!-- BLOG 
 <section class="blog text-center" id="blog">
       <h2 class="title-h2">Últimas do Blog</h2>
       
@@ -264,7 +264,7 @@
 
       <div class="container">
           <div class="row">
-            <!-- featured post -->
+            <!-- featured post 
 
 
                 <?php
@@ -298,7 +298,7 @@
                   // Reset Query
                   wp_reset_query();;
             ?>
-            <!-- /end featured post -->
+            <!-- /end featured post 
 
 
 
@@ -316,7 +316,7 @@
                     $thumbnail_src = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), '' );
 
                 ?>            
-              <!-- box-post -->
+              <!-- box-post 
                 <div class="img-box-post" style="background: url('<?php echo $thumbnail_src[0];?>')">
                   <div class="box-post text-left">
                       <a href="<?php echo get_permalink()?>"> <h4><?php echo the_title()?></h4></a>                    
@@ -325,7 +325,7 @@
                       </div>
                   </div>    
                 </div>
-                <!-- / end box-post -->
+                <!-- / end box-post 
                   <?php 
                     endwhile; 
                     // Reset Query

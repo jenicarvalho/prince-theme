@@ -1,0 +1,79 @@
+[33mcommit 14cc94ce0d32603501e1ed330bb1bdbb86644f27[m
+Author: Jeniffer Carvalho <jenicarvalho@live.com>
+Date:   Sun Sep 11 19:09:41 2016 -0300
+
+    criação das páginas category tag e sidebar
+
+[33mcommit 399eb73758c6a00d15ebb4ce5b0744fa1193365c[m
+Author: Jeniffer Carvalho <jenicarvalho@live.com>
+Date:   Sun Sep 11 19:08:48 2016 -0300
+
+    inclusao sharing box e get_sidebar
+
+[33mcommit 46cb2a1cec13c78fe75ea5d1c0cf3ecbf42935e8[m
+Author: Jeniffer Carvalho <jenicarvalho@live.com>
+Date:   Sun Sep 11 19:07:10 2016 -0300
+
+    funcao para posts mais vistos
+
+[33mcommit e8dcdf3a62df9b2ed267abe22e1e921f1b7a345f[m
+Author: Jeniffer Carvalho <jenicarvalho@live.com>
+Date:   Sun Sep 11 19:06:19 2016 -0300
+
+    inclusao addthis para compartilhar posts
+
+[33mcommit 07e95bcfe99659b9f469228de7faba2bc5d44d56[m
+Author: Jeniffer Carvalho <jenicarvalho@live.com>
+Date:   Sun Sep 11 17:38:58 2016 -0300
+
+    utilizado meta box dos links das agencias
+
+[33mcommit 34dc1786ae5bc7dd26b3a2d39dc604f1c0dc8a2c[m
+Author: Jeniffer Carvalho <jenicarvalho@live.com>
+Date:   Sun Sep 11 17:38:13 2016 -0300
+
+    funcão title criada e metabox das agencias criada
+
+[33mcommit 5c1f7595af896b69808259b47735a8204c2cd83c[m
+Author: Jeniffer Carvalho <jenicarvalho@live.com>
+Date:   Sun Sep 11 17:37:28 2016 -0300
+
+    funcao title adicionada
+
+[33mcommit d2c249089aceee58e4d16f5ca425b5be3762d7d2[m
+Merge: 331afdc 7ec233e
+Author: Jeniffer Carvalho <jenicarvalho@live.com>
+Date:   Sun Sep 11 12:53:59 2016 -0300
+
+    Merge https://github.com/jenicarvalho/prince-theme
+    problema com botoes no celular resolvido
+
+[33mcommit 331afdce06a1797a2bef752051c0eb6e889aca11[m
+Author: Jeniffer Carvalho <jenicarvalho@live.com>
+Date:   Sun Sep 11 12:48:15 2016 -0300
+
+    problemas com botoes resolvidos
+
+[33mcommit 7ec233ea5a0bec062e42de59e2ee46952ebf8bed[m
+Author: jenicarvalho <jenicarvalho@live.com>
+Date:   Mon Sep 5 22:25:47 2016 -0300
+
+    Create README.md
+
+[33mcommit 59e8e213698323f0adce6535c3afc474c72b498b[m
+Author: Jeniffer Carvalho <jenicarvalho@live.com>
+Date:   Mon Sep 5 22:21:36 2016 -0300
+
+    Post type agencias
+
+[33mcommit 0dbc766dde44bd4da4facccbd6ee1777ca810733[m
+Author: Jeniffer Carvalho <jenicarvalho@live.com>
+Date:   Mon Sep 5 22:03:52 2016 -0300
+
+    Primeira versão do Prince
+
+[33mcommit 958d3ce0835315830db011ce1acbc693e2acd9fc[m
+Author: Jeniffer Carvalho <jenicarvalho@live.com>
+Date:   Mon Sep 5 22:02:22 2016 -0300
+
+    Subindo primeira versão do Prince

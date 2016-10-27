@@ -51,7 +51,7 @@ $total_results = $wp_query->found_posts;
 
 				else :?>
 
-					<h3>Sem posts nessa Tag.</h3>
+					<h3>Sem resultados.</h3>
 
 			<?php			
 				endif;

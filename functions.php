@@ -1,6 +1,10 @@
 <?php
 
 
+
+
+
+
 	add_action('after_setup_theme', 'custom_setup');
 
 	//permite uso do menu do bootstrap com wp_nav
@@ -24,9 +28,7 @@ function custom_formats(){
 
 	//registra os estilos corretamente
 	wp_register_style('custom_font', 'https://fonts.googleapis.com/css?family=Josefin+Sans:100,300|Open+Sans', null, null, 'all');
-	wp_register_style('boot', PXS_THEME_URL . '/css/bootstrap.min.css', null, null, 'all');
 	wp_register_style('stl', PXS_THEME_URL . '/css/style.css', null, null, 'all');
-	wp_register_style('font', PXS_THEME_URL . '/css/font-awesome.min.css', null, null, 'all');
 
 	//insere os estilos
 	wp_enqueue_style('custom_font');

@@ -8,25 +8,13 @@
     <meta itemprop="publisher" content="Pixels">
     <meta itemprop="editor" content="Jeniffer Carvalho">
 
-    <meta property="og:site_name" content="agenciapixels.com">
-    <meta property="og:image" content="">
-    <meta property="og:type" content="post">
-    <meta property="og:description" content="">
-    <meta property="og:title" content=''>
 
     <title><?php  titulo()?></title>
 
 
     <!-- fav -->
     <link rel="icon" href="<?php echo PXS_THEME_URL?>/img/favicon.png">
-
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    
     <?php wp_head();?>
   </head>
   <body>
@@ -41,7 +29,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#"><img src="<?php echo PXS_THEME_URL?>/img/logo.png" title="Pixels" alt="Pixels"></a>
+      <a class="navbar-brand" href="<?=PXS_URL?>"><img src="<?php echo PXS_THEME_URL?>/img/logo.png" title="Pixels" alt="Pixels"></a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
