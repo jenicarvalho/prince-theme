@@ -19,12 +19,15 @@
 ?>  
   <section class="slider" id="home" style="background: url(<?=$thumbnail_src[0]?>); background-size:cover; background-attachment:fixed">
     <div class="container">
-        <h2><?=$slide_meta['principal'][0]?></h2>
-        <p><?=$slide_meta['subtitulo'][0]?></p>
 
-        <div class="buttons">
-          <a class="btn btn-info" href="#quem">CONHEÇA</a>
-          <a class="btn btn-warning" href="#contato">CONTATO</a>
+        <div class="slide-content">
+          <h2><?=$slide_meta['principal'][0]?></h2>
+          <p><?=$slide_meta['subtitulo'][0]?></p>
+
+          <div class="buttons">
+            <a class="btn btn-info" href="#quem">CONHEÇA</a>
+            <a class="btn btn-warning" href="#contato">CONTATO</a>
+          </div>
         </div>
     </div>
   </section>
@@ -44,6 +47,8 @@
 <section class="services" id="servicos">
     <div class="container">
       <div class="row">
+
+        <h1 class="text-center">Criação e desenvolvimento de sites incríveis!</h1>
 
         <!-- SINGLE SERVICES -->
         <div class="single-services serv1">
