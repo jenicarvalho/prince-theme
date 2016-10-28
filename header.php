@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Agência com foco em outsourcing de serviços web">
+    <meta name="description" content="Criação de sites para agências de publicidade, PSD para HTML, criação de sites em wordpress, desenvolvimento de temas.">
     <meta itemprop="publisher" content="Pixels">
     <meta itemprop="editor" content="Jeniffer Carvalho">
 
